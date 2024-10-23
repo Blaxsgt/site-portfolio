@@ -139,7 +139,7 @@ section.topo-do-site{
   border-radius: 17px; /* Borda arredondada para a imagem */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para dar destaque */
 }
-<<<<<<< HEAD
+
 
 .texto-topo {
   text-align: center;
@@ -161,5 +161,5 @@ section.topo-do-site{
   position: relative;  /* Garante que o z-index funcione */
   z-index: 1;  /* Mantém os elementos na frente das partículas */
 }
-=======
->>>>>>> 66814da350bdefce5c68b36f28e71833faafd4e5
+
+
