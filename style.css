@@ -158,4 +158,8 @@ section.topo-do-site{
 .fotos, .botoes {
   position: relative;  /* Garante que o z-index funcione */
   z-index: 1;  /* Mantém os elementos na frente das partículas */
+  
 }
+
+
+
