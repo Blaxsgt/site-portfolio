@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Código Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Estilo Customizado -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Centralização e estilo da seção */
+        .topo-do-site {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 5%;
+            color: #fff;
+        }
+
+        /* Estilo do texto */
+        .texto-topo {
+            flex: 1;
+            max-width: 50%;
+            margin-right: 20px;
+            color: #fff;
+        }
+
+        .texto-topo h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .texto-topo p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo da imagem */
+        .img-topo-site {
+            max-width: 300px;
+            margin-left: auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .img-topo-site img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilo do botão */
+        .btn-contato button {
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: #C53030;
+            color: #fff;
+            border: 0;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-contato button:hover {
+            background-color: #FF6B6B;
+        }
+    </style>
+    <title>Portfolio André Malvera</title>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="imagens/DALL·E 2024-10-09 21.37.41 - A refined and polished logo featuring the letters 'A.M.S' with a sleek, modern design. The letters should be bold yet elegant, with smooth curves or g.webp">
+                </a>
+            </div><!-- Logo -->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Linguagens</a></li>
+                    <li><a href="#">CNT</a></li>
+                    <li><a href="chs.html">CHS</a></li>
+                    <li><a href="#">IOT</a></li>
+                    <li><a href="#">Matemática</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="curriculo.html">
+                    <button>Currículo</button>
+                </a>
+            </div>
+        </div><!-- Interface -->
+    </header>
+    
+    <main>
+        <section class="topo-do-site">
+            <div class="texto-topo">
+                <h1><b>Apresentação pessoal<span>:</span></b></h1>
+                <p>Esse é um site que visa apresentar o que eu (André Malvera dos Santos) tenho aprendido ao longo desses anos, mostrando as minhas aulas favoritas e projetos também. Além de ser algo totalmente feito por mim.</p>
+                <div class="btn-contato">
+                    <a href="#">
+                        <button>IOT</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="img-topo-site">
+                <img src="imagens/Bright Illustrative Quiet Space Pinterest Pin.png" alt="Eu próprio">
+            </div><!-- Imagem Topo -->
+        </section><!-- Topo do site -->
+    </main>
+</body>
+</html>
+
+<!-- particles.js container -->
+<div id="particles-js"></div>
+<div class="count-particles">
+    <span class="js-count-particles">--</span> particles
+</div>
+
+
+<!-- Referência ao script do particles.js e stats.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="particles.js"></script>
