@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -92,4 +93,51 @@ body {
     100% { background-position: 0 0; }
 }
 
+
+
+/* Estilo para a seção de matérias */
+.materias {
+    padding: 40px 5%;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilo para as cartas */
+.cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre as cartas */
+}
+
+.carta {
+    background-color: #C53030; /* Cor de fundo da carta */
+    border-radius: 15px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa as bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+    width: 200px; /* Largura fixa para as cartas */
+    height: 120px; /* Altura das cartas */
+    display: flex; /* Para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.carta button {
+    padding: 0; /* Remove o padding do botão */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: #fff; /* Cor do texto */
+    background-color: transparent; /* Fundo transparente para o botão */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    width: 100%; /* Faz o botão ocupar toda a largura da carta */
+    height: 100%; /* Faz o botão ocupar toda a altura da carta */
+    text-align: center; /* Centraliza o texto no botão */
+}
+
+/* Efeito ao passar o mouse */
+.carta:hover {
+    transform: scale(1.05); /* Aumenta a carta ao passar o mouse */
+}
 
