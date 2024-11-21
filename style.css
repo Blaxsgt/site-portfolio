@@ -1,164 +1,166 @@
-estilo geral/
+/*estilo geral*/
+
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
-    background-color: black;
-    height: 100vh;
+  background-color: black;
+  height: 100vh;
 }
 
 .interface{
-    max-width: 1280px;
-    margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 
-  
+
 
 /* ESTILO DO CABEÇALHO */
 
 header{
-    padding: 40px 10%;
+  padding: 40px 10%;
 }
 
 header > .interface{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 image
 div {
-    border: 0px solid rgb(17, 17, 17);
-    width: px;
-    height: 100px;
-  }
-  
-  img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-  }
+  border: 0px solid rgb(17, 17, 17);
+  width: px;
+  height: 100px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
 
 
 
-  header a{
-    color: #7d7d7d;;
-    text-decoration: none;
-    display: inline-block;
-    transition: .2s;
+header a{
+  color: #7d7d7d;;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s;
 
-  }
-  
-  header a:hover{
-    color: #fff;
-    transform: scale(1.15);
+}
 
-
-  }
-
-  header nav ul{
-    list-style-type: none;
-  }
-
-  header nav ul li{
-    display: inline-block;
-    padding: 0 40px;
-  }
-
-  header .btn-contato button{
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 500;
-    background-color: rgb(235, 29, 29);
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-  }
-  
-  header .btn-contato button:hover{
-    box-shadow: 0px 0px 8px #e5ff00;
+header a:hover{
+  color: #fff;
+  transform: scale(1.15);
 
 
+}
 
-  }
+header nav ul{
+  list-style-type: none;
+}
+
+header nav ul li{
+  display: inline-block;
+  padding: 0 40px;
+}
+
+header .btn-contato button{
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: rgb(235, 29, 29);
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+header .btn-contato button:hover{
+  box-shadow: 0px 0px 8px #e5ff00;
+
+
+
+}
 /*Estilo do topo do site */
 
 section.topo-do-site{
 
-  padding: 40px 4%;
- }
+padding: 40px 4%;
+}
 
- section.topo-do-site .flex{
-  align-items: center;
-  justify-content: center;
-  gap: 90px;
+section.topo-do-site .flex{
+align-items: center;
+justify-content: center;
+gap: 90px;
 
- }
+}
 
- .topo-do-site{
-  color: #fff;
-  font-size: 17px;
+.topo-do-site{
+color: #fff;
+font-size: 17px;
 
- }
-  
+}
+
 
 /* Ajuste da seção topo-do-site */
 .topo-do-site {
-  display: flex;
-  justify-content: space-between; /* Espaça o texto à esquerda e a imagem à direita */
-  align-items: center; /* Alinha verticalmente o texto e a imagem */
-  gap: 20px; /* Espaçamento entre o texto e a imagem */
-  padding: 40px 5%; /* Ajusta o espaçamento interno da seção */
+display: flex;
+justify-content: space-between; /* Espaça o texto à esquerda e a imagem à direita */
+align-items: center; /* Alinha verticalmente o texto e a imagem */
+gap: 20px; /* Espaçamento entre o texto e a imagem */
+padding: 40px 5%; /* Ajusta o espaçamento interno da seção */
 }
 
 /* Ajuste do texto */
 .texto-topo {
-  flex: 1; /* Permite que o texto ocupe o espaço restante */
-  max-width: 50%; /* Limita a largura do texto */
-  color: #fff; /* Cor do texto */
-  margin-right: 20px; /* Espaço entre o texto e a imagem */
+flex: 1; /* Permite que o texto ocupe o espaço restante */
+max-width: 50%; /* Limita a largura do texto */
+color: #fff; /* Cor do texto */
+margin-right: 20px; /* Espaço entre o texto e a imagem */
 }
 
 /* Estilo da imagem para ajustar seu tamanho e posicionamento */
 .img-topo-site {
-  max-width: 300px; /* Ajuste a largura máxima da imagem */
-  margin-left: auto; /* Empurra a imagem para o lado direito */
+max-width: 300px; /* Ajuste a largura máxima da imagem */
+margin-left: auto; /* Empurra a imagem para o lado direito */
 }
 
 .img-topo-site img {
-  width: 100%;
-  height: auto;
-  border-radius: 17px; /* Borda arredondada para a imagem */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para dar destaque */
+width: 100%;
+height: auto;
+border-radius: 17px; /* Borda arredondada para a imagem */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para dar destaque */
 }
 
 
 .texto-topo {
-  text-align: center;
-  margin-left: 20%;
+text-align: center;
+margin-left: 20%;
 
 }
 
 #particles-js {
-  position: absolute;  /* ou relative, se for mais adequado */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;  /* Ajuste para a largura desejada */
-  height: 100%; /* Ajuste para a altura desejada */
-  z-index: -1;  /* Coloca as partículas atrás de outros elementos */
+position: absolute;  /* ou relative, se for mais adequado */
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 100%;  /* Ajuste para a largura desejada */
+height: 100%; /* Ajuste para a altura desejada */
+z-index: -1;  /* Coloca as partículas atrás de outros elementos */
 }
 
 .fotos, .botoes {
-  position: relative;  /* Garante que o z-index funcione */
-  z-index: 1;  /* Mantém os elementos na frente das partículas */
-  
+position: relative;  /* Garante que o z-index funcione */
+z-index: 1;  /* Mantém os elementos na frente das partículas */
+
+
 }
 
 

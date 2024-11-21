@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cnt - Cartas</title>
+    <link rel="stylesheet" href="estilodacarta.css">
+    <style>
+        /* Estilos principais e de layout */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+
+        .carta {
+            background-color: #C53030 !important;
+            width: 200px;
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            perspective: 1000px;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .materias {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cartas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 190px;
+            justify-items: center;
+            padding: 20px;
+        }
+
+        /* Estilos para links nas cartas */
+        .carta a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: rgb(202, 202, 202);
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Efeito de hover nas cartas */
+        .carta:hover {
+            transform: translateY(-10px) rotateY(10deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo do botão Voltar */
+        .btn-voltar {
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: #C53030;
+            color: #fff;
+            border: 0;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #FF6B6B;
+            box-shadow: 0px 0px 8px #e5ff00;
+        }
+
+        /* Efeito de borda brilhante nas cartas */
+        .carta::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff0000, #0ae741, #ea00ff, #48ff00);
+            z-index: -1;
+            border-radius: 17px;
+            animation: animate 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .carta:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes animate {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <section class="materias">
+        <!-- Cartas das matérias -->
+        <div class="cartas">
+            <div class="carta"><a href="#">Biologia</a></div>
+            <div class="carta"><a href="#">Física</a></div>
+            <div class="carta"><a href="#">Química</a></div>
+           
+        </div>
+
+        <!-- Botão Voltar -->
+        <button class="btn-voltar" onclick="history.back()">Voltar</button>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+    <script src="cartas.js"></script>
+</body>
+</html>
