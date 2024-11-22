@@ -1,3 +1,4 @@
+/* Estilo básico do corpo */
 body {
     margin: 0;
     padding: 0;
@@ -5,9 +6,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: #000; /* Fundo preto para contraste */
 }
 
+/* Fundo de partículas */
 #particles-js {
     position: fixed;
     top: 0;
@@ -17,6 +19,7 @@ body {
     z-index: 1;
 }
 
+/* Container das matérias */
 .materias {
     position: relative;
     z-index: 2;
@@ -26,116 +29,62 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre cartas */
 }
 
-.cartas {
-    display: flex;
-    gap: 20px; /* Espaço entre as cartas */
-    padding: 20px;
-    justify-content: center;
-}
-
+/* Estilo das cartas */
 .carta {
-    width: 200px;
-    height: 300px;
-    background-color: #C53030;
-    border-radius: 15px;
+    width: 150px;
+    height: 220px;
+    background-color: white;
+    border: 2px solid #000; /* Cor da borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    perspective: 1000px;
-    margin: 0 10px; /* Espaçamento horizontal entre cartas */
+    transition: transform 0.5s ease; /* Transição suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    perspective: 1000px; /* Para o efeito de rotação 3D */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Evita que elementos internos ultrapassem a borda */
 }
 
-.carta:hover {
-    transform: translateY(-10px) rotateY(10deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.carta button {
+/* Estilo do conteúdo interno da carta */
+.carta .carta-interna {
     width: 100%;
     height: 100%;
-    border: none;
-    background: none;
-    color: rgb(202, 202, 202);
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.carta::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00);
-    z-index: -1;
-    border-radius: 17px;
-    animation: animate 20s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.carta:hover::before {
-    opacity: 1;
-}
-
-@keyframes animate {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
-
-
-
-/* Estilo para a seção de matérias */
-.materias {
-    padding: 40px 5%;
-    text-align: center;
-    color: #fff;
-}
-
-/* Estilo para as cartas */
-.cartas {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 20px; /* Espaçamento entre as cartas */
+    backface-visibility: hidden; /* Oculta o lado de trás da carta */
+    transform: rotateY(180deg); /* Inicia virada */
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+    background-color: #fff;
 }
 
-.carta {
-    background-color: #C53030; /* Cor de fundo da carta */
-    border-radius: 15px; /* Bordas arredondadas */
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa as bordas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
-    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
-    width: 200px; /* Largura fixa para as cartas */
-    height: 120px; /* Altura das cartas */
-    display: flex; /* Para centralizar o conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-}
-
-.carta button {
-    padding: 0; /* Remove o padding do botão */
-    font-size: 1.2rem; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    color: #fff; /* Cor do texto */
-    background-color: transparent; /* Fundo transparente para o botão */
-    border: none; /* Sem borda */
-    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-    width: 100%; /* Faz o botão ocupar toda a largura da carta */
-    height: 100%; /* Faz o botão ocupar toda a altura da carta */
-    text-align: center; /* Centraliza o texto no botão */
-}
-
-/* Efeito ao passar o mouse */
+/* Efeito ao passar o mouse na carta */
 .carta:hover {
-    transform: scale(1.05); /* Aumenta a carta ao passar o mouse */
+    transform: rotateY(180deg); /* Faz o flip da carta */
+}
+
+/* Estilo do símbolo ou texto no canto superior da carta */
+.carta::before {
+    content: attr(data-simbolo); /* Insere o símbolo dinamicamente */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #000;
+    opacity: 0.5; /* Transparência para o símbolo */
+}
+
+/* Estilo adicional para animação de hover */
+.carta:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
 }

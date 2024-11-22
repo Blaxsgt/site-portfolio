@@ -1,199 +1,86 @@
 
-window.onload = function() {
+window.onload = function () {
     // Configuração das partículas
     particlesJS("particles-js", {
-        "particles": {
-            "number": {
-                "value": 60,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
+        particles: {
+            number: {
+                value: 50,
+                density: {
+                    enable: true,
+                    value_area: 800
                 }
             },
-            "color": {
-                "value": "#ffffff"
+            color: {
+                value: "#ffffff"
             },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#00000"
+            shape: {
+                type: "circle",
+                stroke: {
+                    width: 0,
+                    color: "#000000"
                 }
             },
-            "opacity": {
-                "value": 0.55,
-                "random": false
+            opacity: {
+                value: 0.5,
+                random: false
             },
-            "size": {
-                "value": 2,
-                "random": true
+            size: {
+                value: 3,
+                random: true
             },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "fff",
-                "opacity": 0.3,
-                "width": 2
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1
             },
-            "move": {
-                "enable": true,
-                "speed": 2,
-                "direction": "none"
+            move: {
+                enable: true,
+                speed: 2,
+                direction: "none"
             }
         },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "repulse"
                 },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
+                onclick: {
+                    enable: true,
+                    mode: "push"
                 }
             }
         },
-        "retina_detect": true
+        retina_detect: true
     });
 
     // Configuração dinâmica das cartas
-    const cartas = document.querySelectorAll('.carta');
+    const cartas = document.querySelectorAll(".carta");
     const colors = {
-        'geografia': '#66CC00',
-        'sociologia': '#FF9900',
-        'filosofia': '#CC66FF',
-        'historia': '#0099CC'
+        geografia: "#66CC00",
+        sociologia: "#FF9900",
+        filosofia: "#CC66FF",
+        historia: "#0099CC"
     };
 
-    cartas.forEach(carta => {
-        const materia = carta.classList[1]; // pega a classe da matéria, ex: 'geografia'
-        const corFundo = colors[materia] || '#777'; // define a cor baseada na matéria ou padrão
+    cartas.forEach((carta) => {
+        // Identifica a matéria pela classe ou atributo "data-materia"
+        const materia = carta.dataset.materia || "default";
+        const corBorda = colors[materia] || "#777";
 
-        // Aplica estilos dinamicamente
-        carta.style.backgroundColor = corFundo;
-        carta.style.width = '20vw';
-        carta.style.height = '30vh';
-        carta.style.margin = '10vh auto';
-        carta.style.perspective = '1000px';
-        carta.style.textDecoration = 'none';
-        carta.style.transition = 'transform 0.5s';
+        // Aplica a cor da borda com base na matéria
+        carta.style.borderColor = corBorda;
 
-        // Configuração do hover para abrir as cartas
-        const cartaInterna = carta.querySelector('.carta-interna');
-        cartaInterna.style.backgroundColor = '#fff';
-        cartaInterna.style.backfaceVisibility = 'hidden';
-        cartaInterna.style.transform = 'rotateY(180deg)';
-        cartaInterna.style.display = 'flex';
-        cartaInterna.style.alignItems = 'center';
-        cartaInterna.style.justifyContent = 'center';
+        // Adiciona o símbolo ou texto no centro da carta
+        const cartaInterna = carta.querySelector(".carta-interna");
+        cartaInterna.textContent = materia.toUpperCase();
 
-        // Evento de hover para rotacionar a carta
-        carta.addEventListener('mouseenter', () => {
-            cartaInterna.style.transform = 'rotateY(0deg)';
-        });
-        carta.addEventListener('mouseleave', () => {
-            cartaInterna.style.transform = 'rotateY(180deg)';
-        });
-    });
-}; 
-
-window.onload = function() {
-    // Configuração das partículas
-    particlesJS("particles-js", {
-        "particles": {
-            "number": {
-                "value": 50,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#ffffff"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": false
-            },
-            "size": {
-                "value": 3,
-                "random": true
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 2,
-                "direction": "none"
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                }
-            }
-        },
-        "retina_detect": true
-    });
-
-    // Configuração dinâmica das cartas
-    const cartas = document.querySelectorAll('.carta');
-    const colors = {
-        'geografia': '#66CC00',
-        'sociologia': '#FF9900',
-        'filosofia': '#CC66FF',
-        'historia': '#0099CC'
-    };
-
-    cartas.forEach(carta => {
-        const materia = carta.classList[1]; // pega a classe da matéria, ex: 'geografia'
-        const corFundo = colors[materia] || '#777'; // define a cor baseada na matéria ou padrão
-
-        // Aplica estilos dinamicamente
-        carta.style.backgroundColor = corFundo;
-        carta.style.width = '20vw';
-        carta.style.height = '30vh';
-        carta.style.margin = '10vh auto';
-        carta.style.perspective = '1000px';
-        carta.style.textDecoration = 'none';
-        carta.style.transition = 'transform 0.5s';
-
-        // Configuração do hover para abrir as cartas
-        const cartaInterna = carta.querySelector('.carta-interna');
-        cartaInterna.style.backgroundColor = '#fff';
-        cartaInterna.style.backfaceVisibility = 'hidden';
-        cartaInterna.style.transform = 'rotateY(180deg)';
-        cartaInterna.style.display = 'flex';
-        cartaInterna.style.alignItems = 'center';
-        cartaInterna.style.justifyContent = 'center';
-
-        // Evento de hover para rotacionar a carta
-        carta.addEventListener('mouseenter', () => {
-            cartaInterna.style.transform = 'rotateY(0deg)';
-        });
-        carta.addEventListener('mouseleave', () => {
-            cartaInterna.style.transform = 'rotateY(180deg)';
-        });
+        // Adiciona o símbolo pequeno na parte superior da carta
+        carta.setAttribute("data-simbolo", materia.charAt(0).toUpperCase());
     });
 };
+
 
