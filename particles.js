@@ -168,4 +168,8 @@ window.onload = function() {
           }
       },
       "retina_detect": true
+
   });
+;
+
+
