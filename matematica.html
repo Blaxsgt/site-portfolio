@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>matemática - Cartas</title>
+    <title>Matemática - Cartas</title>
     <link rel="stylesheet" href="estilodacarta.css">
     <style>
         /* Estilos principais e de layout */
@@ -29,6 +29,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             position: relative;
             perspective: 1000px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         #particles-js {
@@ -105,7 +108,6 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(45deg, #ff0000, #0ae741, #ea00ff, #48ff00);
             z-index: -1;
             border-radius: 17px;
             animation: animate 20s linear infinite;
@@ -122,6 +124,11 @@
             50% { background-position: 400% 0; }
             100% { background-position: 0 0; }
         }
+
+        /* Estilo específico para a carta de Matemática */
+        .matematica {
+            background-image: url('imagens/math\ wallpapper.webp'); 
+        }
     </style>
 </head>
 <body>
@@ -130,10 +137,7 @@
     <section class="materias">
         <!-- Cartas das matérias -->
         <div class="cartas">
-            
-            <div class="carta"><a href="favoritamat.html">Matemática</a></div>
-            
-           
+            <div class="carta matematica"><a href="favoritamat.html">Matemática</a></div>
         </div>
 
         <!-- Botão Voltar -->

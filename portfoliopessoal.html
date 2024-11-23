@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Pessoal - Hobbies e Curiosidades</title>
+  
+  <!-- Link para o Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Link para o Font Awesome (Ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #000000; /* Fundo mais claro e suave */
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #000000; /* Branco para contraste suave */
+      color: #333;
+      padding: 3rem 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #2c3e50;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-top: 10px;
+      color: #7f8c8d;
+    }
+
+    .container {
+      padding: 3rem 1rem;
+    }
+
+    .hobby {
+      margin-bottom: 2rem;
+    }
+
+    .hobby img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 1rem 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+      background-color: #ffffff;
+      color: #0c0c0c;
+      padding: 1.5rem 0;
+      text-align: center;
+      margin-top: 3rem;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-voltar {
+      background-color: #2980b9; /* Azul suave */
+      color: #1d1b1b;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 30px;
+      margin-top: 3rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-voltar:hover {
+      background-color: #3498db; /* Azul mais forte no hover */
+      transform: scale(1.05);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    .section-content {
+      margin-bottom: 3rem;
+    }
+
+    /* Ajuste da imagem na seção Minha Escola e Sala */
+    .section-content img {
+      width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+      max-width: 600px; /* Limita a largura máxima da imagem */
+      height: auto; /* Mantém a proporção original da imagem */
+      border-radius: 12px; /* Arredonda as bordas da imagem */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave à imagem */
+      margin: 1rem 0; /* Adiciona margem acima e abaixo da imagem */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>André Malvera Dos Santos</h1>
+    <h2>Portfólio Pessoal - Hobbies e Curiosidades</h2>
+  </header>
+
+  <div class="container">
+
+    <!-- Hobbies e Curiosidades -->
+    <section class="section-content">
+      <h2 class="section-title">Hobbies e Curiosidades</h2>
+
+      <!-- Fotografia -->
+      <section class="hobby">
+        <h3>Fotografia</h3>
+        <p>Quando não estou estudando, curto bastante jogar jogos online no dia a dia.</p>
+        <img src="imagens/valorant.jpg" alt="Foto de paisagem capturada">
+      </section>
+
+      <!-- Programação -->
+      <section class="hobby">
+        <h3>Programação</h3>
+        <p>Quando não estou gastando meu tempo com coisas divertidas como jogar, eu gosto de aprender. Por isso, sempre busco estudar programação.</p>
+        <img src="imagens/codando.jpeg" alt="Imagem de código na tela">
+      </section>
+
+      <!-- Viagens -->
+      <section class="hobby">
+        <h3>Viagens</h3>
+        <p>Gosto bastante de viajar, principalmente pelo Brasil. Já viajei por quase todo o nordeste.</p>
+      </section>
+
+      <!-- Galeria de Imagens -->
+      <div class="gallery mb-4">
+        <img src="imagens/aracaju.jpeg" alt="Imagem de Aracaju" class="col-md-4">
+        <img src="imagens/bonit.jpeg" alt="Imagem de Bonito" class="col-md-4">
+        <img src="imagens/viagem.jpeg" alt="Imagem de Viagem" class="col-md-4">
+      </div>
+    </section>
+
+    <!-- Informações Pessoais -->
+    <section class="section-content">
+      <h2 class="section-title">Informações Pessoais</h2>
+      <p>Meu nome é André Malvera dos Santos e estou em busca de aprender e aplicar novas tecnologias e ideias. O ensino médio tem sido um período de grandes desafios, mas também de muita realização. Adoro aprender sobre novas áreas e estou constantemente buscando maneiras de me aprimorar.</p>
+    </section>
+
+    <!-- Reflexão sobre o Ensino Médio -->
+    <section class="section-content">
+      <h2 class="section-title">Reflexão sobre o Ensino Médio</h2>
+      <p>O ensino médio foi um período de autoconhecimento e crescimento. Aprendi a valorizar tanto os momentos de dificuldades quanto os de superação. O que mais me marcou foi perceber como as experiências, mesmo as mais desafiadoras, moldam nossa trajetória e nos preparam para o futuro. Cada etapa, cada tarefa, trouxe algo novo.</p>
+    </section>
+
+    <!-- Tarefas Favoritas e o que Aprendi -->
+    <section class="section-content">
+      <h2 class="section-title">Tarefas Favoritas e o que Aprendi</h2>
+      <p>Minhas tarefas favoritas foram o Maracatu Rural e a criação do site de IoT, juntamente com os projetos de Arduino. Essas tarefas foram bem desafiadoras e exigiram muito esforço, mas o resultado final foi excelente. Através dessas experiências, aprendi muito sobre trabalho em equipe, resolução de problemas e sobre a aplicação prática de conceitos que antes pareciam distantes.</p>
+    </section>
+
+    <!-- Minha Escola e Sala -->
+    <section class="section-content">
+      <h2 class="section-title">Minha Escola e Sala</h2>
+      <p>A sala de aula sempre foram o lugar onde eu mais aprendi. Foi nela que ganhei mais conhecimento e me deparei com novos desafios. </p>
+      <img src="imagens/_P3A8961.jpg" alt="imagem da sala">
+    </section>
+
+    <!-- Botão Voltar -->
+    <div class="text-center">
+      <button class="btn-voltar" onclick="window.history.back()">Voltar</button>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 André Malvera Dos Santos. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
