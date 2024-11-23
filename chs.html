@@ -6,7 +6,6 @@
     <title>CHS - Cartas</title>
     <link rel="stylesheet" href="estilodacarta.css">
     <style>
-        /* Estilos principais e de layout */
         body {
             margin: 0;
             padding: 0;
@@ -15,20 +14,6 @@
             justify-content: center;
             align-items: center;
             background-color: #000;
-        }
-
-        .carta {
-            background-color: #C53030 !important;
-            width: 200px;
-            height: 300px;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.5s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            perspective: 1000px;
         }
 
         #particles-js {
@@ -52,12 +37,27 @@
         .cartas {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 190px;
+            gap: 40px;
             justify-items: center;
             padding: 20px;
         }
 
-        /* Estilos para links nas cartas */
+        .carta {
+            width: 200px;
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.5s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            perspective: 1000px;
+        }
+
         .carta a {
             display: flex;
             justify-content: center;
@@ -70,15 +70,15 @@
             letter-spacing: 2px;
             width: 100%;
             height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
         }
 
-        /* Efeito de hover nas cartas */
         .carta:hover {
             transform: translateY(-10px) rotateY(10deg);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Estilo do botão Voltar */
         .btn-voltar {
             padding: 10px 40px;
             font-size: 18px;
@@ -97,30 +97,21 @@
             box-shadow: 0px 0px 8px #e5ff00;
         }
 
-        /* Efeito de borda brilhante nas cartas */
-        .carta::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #ff0000, #0ae741, #ea00ff, #48ff00);
-            z-index: -1;
-            border-radius: 17px;
-            animation: animate 20s linear infinite;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        /* Estilos específicos para cada carta */
+        .geografia {
+            background-image: url('imagens/fundo\ geo.jpeg');
         }
 
-        .carta:hover::before {
-            opacity: 1;
+        .historia {
+            background-image: url('imagens/historia\ fundo.jpg');
         }
 
-        @keyframes animate {
-            0% { background-position: 0 0; }
-            50% { background-position: 400% 0; }
-            100% { background-position: 0 0; }
+        .sociologia {
+            background-image: url('imagens/sociollogia\ fudno.jpg');
+        }
+
+        .filosofia {
+            background-image: url('imagens/filosofia\ fundo.webp');
         }
     </style>
 </head>
@@ -130,10 +121,10 @@
     <section class="materias">
         <!-- Cartas das matérias -->
         <div class="cartas">
-            <div class="carta"><a href="favoritageografia.html">Geografia</a></div>
-            <div class="carta"><a href="favoritahistoria.html">Historia</a></div>
-            <div class="carta"><a href="favoritasociologia.html">Sociologia</a></div>
-            <div class="carta"><a href="favoritafilosofia.html">Filosofia</a></div>
+            <div class="carta geografia"><a href="favoritageografia.html">Geografia</a></div>
+            <div class="carta historia"><a href="favoritahistoria.html">História</a></div>
+            <div class="carta sociologia"><a href="favoritasociologia.html">Sociologia</a></div>
+            <div class="carta filosofia"><a href="favoritafilosofia.html">Filosofia</a></div>
         </div>
 
         <!-- Botão Voltar -->
