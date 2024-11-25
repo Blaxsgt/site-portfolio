@@ -6,7 +6,6 @@
     <title>CHS - Cartas</title>
     <link rel="stylesheet" href="estilodacarta.css">
     <style>
-        /* Estilos principais e de layout */
         body {
             margin: 0;
             padding: 0;
@@ -15,20 +14,6 @@
             justify-content: center;
             align-items: center;
             background-color: #000;
-        }
-
-        .carta {
-            background-color: #C53030 !important;
-            width: 200px;
-            height: 300px;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.5s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            perspective: 1000px;
         }
 
         #particles-js {
@@ -52,12 +37,25 @@
         .cartas {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 190px;
+            gap: 40px;
             justify-items: center;
             padding: 20px;
         }
 
-        /* Estilos para links nas cartas */
+        .carta {
+            width: 200px;
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #C53030; /* Fundo padrão */
+            transition: transform 0.5s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            perspective: 1000px;
+        }
+
         .carta a {
             display: flex;
             justify-content: center;
@@ -72,32 +70,11 @@
             height: 100%;
         }
 
-        /* Efeito de hover nas cartas */
         .carta:hover {
             transform: translateY(-10px) rotateY(10deg);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Estilo do botão Voltar */
-        .btn-voltar {
-            padding: 10px 40px;
-            font-size: 18px;
-            font-weight: 500;
-            background-color: #C53030;
-            color: #fff;
-            border: 0;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .btn-voltar:hover {
-            background-color: #FF6B6B;
-            box-shadow: 0px 0px 8px #e5ff00;
-        }
-
-        /* Efeito de borda brilhante nas cartas */
         .carta::before {
             content: '';
             position: absolute;
@@ -122,6 +99,24 @@
             50% { background-position: 400% 0; }
             100% { background-position: 0 0; }
         }
+
+        .btn-voltar {
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: #C53030;
+            color: #fff;
+            border: 0;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #FF6B6B;
+            box-shadow: 0px 0px 8px #e5ff00;
+        }
     </style>
 </head>
 <body>
@@ -131,7 +126,7 @@
         <!-- Cartas das matérias -->
         <div class="cartas">
             <div class="carta"><a href="favoritageografia.html">Geografia</a></div>
-            <div class="carta"><a href="favoritahistoria.html">Historia</a></div>
+            <div class="carta"><a href="favoritahistoria.html">História</a></div>
             <div class="carta"><a href="favoritasociologia.html">Sociologia</a></div>
             <div class="carta"><a href="favoritafilosofia.html">Filosofia</a></div>
         </div>
