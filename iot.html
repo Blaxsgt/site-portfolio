@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHS - Cartas</title>
+    <title>IoT - Cartas</title>
     <link rel="stylesheet" href="estilodacarta.css">
     <style>
-        /* Estilos principais e de layout */
+        /* Estilos principais */
         body {
             margin: 0;
             padding: 0;
@@ -15,20 +15,6 @@
             justify-content: center;
             align-items: center;
             background-color: #000;
-        }
-
-        .carta {
-            background-color: #C53030 !important;
-            width: 200px;
-            height: 300px;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.5s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            perspective: 1000px;
         }
 
         #particles-js {
@@ -52,12 +38,27 @@
         .cartas {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 190px;
+            gap: 40px;
             justify-items: center;
             padding: 20px;
         }
 
-        /* Estilos para links nas cartas */
+        .carta {
+            width: 200px;
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.5s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            perspective: 1000px;
+        }
+
         .carta a {
             display: flex;
             justify-content: center;
@@ -70,15 +71,15 @@
             letter-spacing: 2px;
             width: 100%;
             height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
         }
 
-        /* Efeito de hover nas cartas */
         .carta:hover {
             transform: translateY(-10px) rotateY(10deg);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Estilo do botão Voltar */
         .btn-voltar {
             padding: 10px 40px;
             font-size: 18px;
@@ -97,30 +98,25 @@
             box-shadow: 0px 0px 8px #e5ff00;
         }
 
-        /* Efeito de borda brilhante nas cartas */
-        .carta::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #ff0000, #0ae741, #ea00ff, #48ff00);
-            z-index: -1;
-            border-radius: 17px;
-            animation: animate 20s linear infinite;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        /* Estilos específicos para cada carta */
+        .carta.bone {
+            background-image: url('imagens/att\ do\ bone\ google.webp');
         }
 
-        .carta:hover::before {
-            opacity: 1;
+        .carta.carrinho {
+            background-image: url('imagens/carrinho\ arduino.jpg');
         }
 
-        @keyframes animate {
-            0% { background-position: 0 0; }
-            50% { background-position: 400% 0; }
-            100% { background-position: 0 0; }
+        .carta.bimestre {
+            background-image: url('imagens/att\ do\ 4\ bimestre.webp');
+        }
+
+        .carta.video {
+            background-image: url('imagens/_P3A8961.jpg');
+        }
+
+        .carta.armarios {
+            background-image: url('imagens/arduino\ armario.jpg');
         }
     </style>
 </head>
@@ -128,20 +124,19 @@
     <div id="particles-js"></div>
     
     <section class="materias">
-        <!-- Cartas das matérias -->
+        <!-- Cartas das atividades -->
         <div class="cartas">
-            <div class="carta"><a href="#">Atividade do Boné </a></div>
-            <div class="carta"><a href="#">Atividade do Carrinho Arduino</a></div>
-            <div class="carta"><a href="#">Atividade do 4º Bimestre (em grupo)</a></div>
-            <div class="carta"><a href="#">Vídeo da Turma</a></div>
-            <div class="carta"><a href="#">Organização dos Armários e Materiais de IOT </a></div>
+            <div class="carta bone"><a href="attdoboné.html">Atividade do Boné</a></div>
+            <div class="carta carrinho"><a href="attcarrinho.html">Atividade do Carrinho Arduino</a></div>
+            <div class="carta bimestre"><a href="#">Atividade do 4º Bimestre (em grupo)</a></div>
+            <div class="carta video"><a href="#">Vídeo da Turma</a></div>
+            <div class="carta armarios"><a href="organziação.html">Organização dos Armários e Materiais de IoT</a></div>
         </div>
 
         <!-- Botão Voltar -->
         <button class="btn-voltar" onclick="history.back()">Voltar</button>
     </section>
 
-    
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="particles.js"></script>
     <script src="cartas.js"></script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video da Sala</title>
+    <link rel="stylesheet" href="estiloattfavorita.css">
+</head>
+<body>
+    <!-- Partículas de fundo, se necessário, caso queira manter -->
+    <div id="particles-js"></div>
+
+    <!-- Seção principal do conteúdo -->
+    <main class="conteudo">
+        <!-- Título da Atividade -->
+        <h1 class="titulo-central">Video da Sala</h1>
+
+        <!-- Container de vídeo -->
+        <div class="video-container">
+            <h2>Valeu Glauco</h2>
+            <video controls width="640" height="360">
+                <source src="videos/glauco.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Botão de voltar -->
+        <button class="btn-voltar" onclick="history.back()">Voltar</button>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>
