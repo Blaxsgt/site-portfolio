@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>att 4 Bimestre</title>
+    <link rel="stylesheet" href="estiloattfavorita.css">
+    <style>
+        /* Apenas para centralizar os elementos como estavam */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black; /* Mantendo fundo escuro */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .conteudo {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .titulo-central {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: yellow;
+            text-shadow: 0 0 10px #fff, 0 0 20px yellow;
+        }
+
+        .video-container {
+            margin: 20px 0;
+        }
+
+        .video-container video {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .video-descricao {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .btn-voltar {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: yellow;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-voltar:hover {
+            background: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Partículas de fundo -->
+    <div id="particles-js"></div>
+
+    <!-- Conteúdo principal -->
+    <main class="conteudo">
+        <!-- Título da Atividade -->
+        <h1 class="titulo-central">Atividade do 4º Bimestre</h1>
+
+        <!-- Container de vídeo -->
+        <div class="video-container">
+            <video controls width="640" height="360">
+                <source src="videos/IOT (Internet of things) - explicação do curso no Senac Nações.mp4" type="video/mp4">
+               
+            </video>
+            <!-- Descrição abaixo do vídeo -->
+            <p class="video-descricao">
+                Nesta atividade, nós, alunos, tivemos a grande missão de falar sobre o curso e explicar o que aprendemos
+                nesse longo período de aula. A apresentação foi uma oportunidade de mostrar o que desenvolvemos durante o
+                curso de IOT (Internet das Coisas).
+            </p>
+        </div>
+
+        <!-- Botão de voltar -->
+        <button class="btn-voltar" onclick="history.back()">Voltar</button>
+    </main>
+
+    <!-- Script para partículas -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>
